@@ -1,0 +1,91 @@
+.card img {
+  width: 100%;
+  max-height: 70%;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.card .desc {
+  margin-bottom: 2rem;
+}
+
+.card .front h4 {
+  padding: 10% 1rem;
+  font-size: 1.5rem;
+}
+
+.card .front.no-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* On mouse-over, add a deeper shadow */
+
+.card .front,
+.card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  transition: transform 0.5s ease-in-out;
+  backface-visibility: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+}
+
+.card.turn .front {
+  transform: rotateY(180deg);
+}
+
+.card .back {
+  background: #333;
+  color: #fff;
+  overflow: hidden;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.card.turn .back {
+  transform: rotateY(360deg);
+}
+
+/* Add some padding inside the card container */
+
+.container {
+  padding: 0.5rem 1rem;
+  & .item {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.card.creator {
+  background: #333;
+  color: #fff;
+  overflow: hidden;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  & .container>h4:first-child {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}

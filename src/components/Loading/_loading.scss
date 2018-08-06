@@ -1,0 +1,26 @@
+.spinner::before {
+  content: "";
+  position: fixed;
+  top: 34vh;
+  left: 43vw;
+  border-top: 5px solid hsl(10, 100%, 50%);
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  width: 15vmax;
+  height: 15vmax;
+  box-sizing: border-box;
+  animation: spinner 0.7s linear infinite;
+  z-index: 9999;
+}
+
+.spinner::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  z-index: 9998;
+}

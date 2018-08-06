@@ -1,0 +1,32 @@
+@include mediaXl {
+  #content {
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+  }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  #content {
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  #content {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+  .search-form {
+    width: 95vw;
+    & input[type="search"] {
+      width: 95%;
+    }
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  #content {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
