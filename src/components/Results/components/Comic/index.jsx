@@ -84,9 +84,9 @@ const Comic = props => {
         <a
           className="comic-link"
           target="_blank"
-          href={props.data.urls.filter(det => det.type === "reader")[0].url}
+          href={props.data.urls.filter(det => det.type === "inAppLink")[0].url}
         >
-          Read on Marvel Digital Comics
+          See on Marvel Digital Comics
         </a>
       </div>
       <div className="cover">
